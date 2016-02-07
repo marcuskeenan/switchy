@@ -1,0 +1,86 @@
+﻿@model PagedList.IPagedList<FlowswitchApplication.Models.Technician>
+    @using PagedList.Mvc;
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Flow Switches</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="input-group custom-search-form classTextWithPad">
+                <span class="input-group-btn btn-group-sm">
+                    <button class="btn btn-default btn-sm" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+                @using (Html.BeginForm())
+                {@Html.TextBox("SearchString", "", new { @class = "form-control", @placeholder = "search all fields...", @style = "height:36px; font-size:18px" })}
+            </div>
+        </div>
+        <div class="col-sm-offset-10">
+            <div class="classTextWithPad">
+                @Html.ActionLink("  Add new flow switch", "Create", new { @class = "btn btn-success btn-xs", @style = "color:white" })
+            </div>
+        </div>
+    </div>
+
+    <div padding="20px">
+
+    </div>
+    <br />
+
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.ActionLink("LastName", "Index", new { sortOrder = ViewBag.LastNameSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.ActionLink("FirstName", "Index", new { sortOrder = ViewBag.FirstNameSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.ActionLink("UserName", "Index", new { sortOrder = ViewBag.UserNameSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.ActionLink("Active", "Index", new { sortOrder = ViewBag.ActiveSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+

@@ -1,0 +1,198 @@
+﻿@model FlowswitchApplication.Models.Flowswitch
+
+@{
+    ViewBag.Title = "Details";
+}
+@Html.Partial("NavBarPartial")
+
+<br />
+<h1 class="bottom-border">@Html.DisplayFor(model => model.Name)</h1>
+
+<h3>details</h3>
+
+<div class="row bottom-border">
+    <div class="col-xs-4 col-md-2">
+        <div>
+            <button class="btn btn-toolbar btn-md" type="button" style="background-color:transparent; border-color:transparent; outline:hidden" data-toggle="collapse" data-target="#details" aria-expanded="true" aria-controls="calibrationRecords">
+                view <span class="glyphicon glyphicon-menu-down"></span>
+            </button>
+        </div>
+    </div>
+    <div class="col-xs-4 col-md-2">
+        <div>
+            <span>
+                <a class="btn btn-toolbar btn-md" type="button" href='@Url.Action("Edit", "Flowswitch", new { id = Model.ID })' data-toggle="modal" , data-target="#myModal" style="background-color:transparent; border-color:transparent; outline:hidden">
+                    edit  <span class="glyphicon glyphicon-edit"></span>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class=" collapse" id="details">
+    <div class="well">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h2 class="panel-title"><strong>@Html.DisplayFor(model => model.Name)</strong></h2>
+
+            </div>
+            <div class="panel-body">
+
+                <dl class="dl-horizontal">
+
+                    <dt>Name: </dt>
+                    <dd>@Html.DisplayFor(model => model.Name)</dd>
+                    <dt>Alias: </dt>
+                    <dd>@Html.DisplayFor(model => model.Alias)</dd>
+                    <dt>Area: </dt>
+                    <dd>@Html.DisplayFor(model => model.Area.Area1)</dd>
+                    <dt>Make: </dt>
+                    <dd>@Html.DisplayFor(model => model.FlowswitchMake.Make)</dd>
+                    <dt>Model: </dt>
+                    <dd>@Html.DisplayFor(model => model.FlowswitchModel.Model)</dd>
+                    <dt>Location: </dt>
+                    <dd>@Html.DisplayFor(model => model.Location.Location1)</dd>
+                    <dt>SubSystem: </dt>
+                    <dd>@Html.DisplayFor(model => model.SubSystem.Acronym)</dd>
+                    <dt>Type: </dt>
+                    <dd>@Html.DisplayFor(model => model.FlowswitchType.Type)</dd>
+                    <dt>Venturi: </dt>
+                    <dd>@Html.DisplayFor(model => model.Venturi.Type)</dd>
+                    <dt>Source: </dt>
+                    <dd>@Html.DisplayFor(model => model.WaterSource.Source)</dd>
+                </dl>
+            </div>
+        </div>
+        <button class="btn btn-toolbar btn-md" type="button" style="background-color:transparent; outline:hidden; border-color:transparent" data-toggle="collapse" data-target="#details" aria-expanded="true" aria-controls="calibrationRecords">
+            close <span class="glyphicon glyphicon-menu-up"></span>
+        </button>
+    </div>
+</div>
+<br />
+<span class="h3">notes <span class="badge alert-warning" style="font-size:small">@{Html.RenderAction("CalibrationRecordCount", "Flowswitch", new { id = Model.ID });}</span></span>
+<div class="row bottom-border">
+    <div class="col-xs-4 col-md-2">
+        <div>
+            <button class="btn btn-toolbar btn-md" type="button" style="background-color:transparent; border-color:transparent; outline:hidden" data-toggle="collapse" data-target="#notes" aria-expanded="true" aria-controls="calibrationRecords">
+                view <span class="glyphicon glyphicon-menu-down"></span>
+            </button>
+        </div>
+    </div>
+    <div class="col-xs-4 col-md-2">
+        <div>
+            <span>
+                <a class="btn btn-toolbar btn-md" type="button" href='@Url.Action("Create", "CalibrationRecord", new { FlowswitchID = Model.ID })' data-toggle="modal" , data-target="#myModal" style="background-color:transparent; border-color:transparent; outline:hidden">
+                    add new  <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="notes">
+    <div class="well">
+        
+    </div>
+</div>
+<br />
+<span class="h3">records <span class="badge alert-danger" style="font-size:small">@{Html.RenderAction("CalibrationRecordCount", "Flowswitch", new { id = Model.ID });}</span></span>
+
+<div class="row bottom-border">
+    <div class="col-xs-4 col-md-2">
+        <div>
+            <button class="btn btn-toolbar btn-md" type="button" style="background-color:transparent; border-color:transparent; outline:hidden" data-toggle="collapse" data-target="#calibrationRecords" aria-expanded="true" aria-controls="calibrationRecords">
+                view <span class="glyphicon glyphicon-menu-down"></span>
+            </button>
+        </div>
+    </div>
+    <div class="col-xs-4 col-md-2">
+        <div>
+            <span>
+                <a class="btn btn-toolbar btn-md" type="button" href='@Url.Action("Create", "CalibrationRecord", new { FlowswitchID = Model.ID })' data-toggle="modal" , data-target="#myModal" style="background-color:transparent; border-color:transparent; outline:hidden">
+                    add new  <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="calibrationRecords">
+    <div class="well">
+        <h4>@Html.DisplayFor(model => model.Name)</h4>
+        <table class="table table-hover hidden-xs h5">
+            <tr>
+                <th class="col-sm-1">Date</th>
+                <th class="col-sm-2">Technician</th>
+                <th class="col-xs-1 hidden-xs">Trip Inches</th>
+                <th class="col-sxs-1 hidden-xs">Trip Galllons</th>
+                <th class="col-xs-1 hidden-xs">Max Inche</th>
+                <th class="col-sxs-1 hidden-xs">Max Gallons</th>
+                <th class="col-sm-4">Calibration Note</th>
+                <th class="col-sm-1">                </th>
+            </tr>
+            @foreach (var item in Model.CalibrationRecords.Reverse())
+            {
+                <tr class='clickable-row' data href="@Url.Action("xxx", "Details", new { id = item.ID})">
+                    <td>@Html.DisplayFor(modelItem => item.DateAdded)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Technician.FirstName) @Html.DisplayFor(modelItem => item.Technician.LastName)</td>
+                    <td class="hidden-xs">@Html.DisplayFor(modelItem => item.TripInches)</td>
+                    <td class="hidden-xs">@Html.DisplayFor(modelItem => item.TripGallons)</td>
+                    <td class="hidden-xs">@Html.DisplayFor(modelItem => item.MaxInches)</td>
+                    <td class="hidden-xs">@Html.DisplayFor(modelItem => item.MaxGallons)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Note)</td>
+                    <td>
+                        <a href='@Url.Action("Details", "CalibrationRecord", new { id = item.ID})' data-toggle="modal" data-target="#myModal" style="outline:hidden; color:white" class="btn btn-info btn-xs">
+                            View
+                        </a>
+                    <td>
+                </tr>
+            }
+        </table>
+        @foreach (var item in Model.CalibrationRecords.Reverse())
+        {
+            <div class="panel panel-default hidden-lg hidden-md hidden-sm">
+                <div class="panel-heading">
+                    <h2 class="panel-title">@Html.DisplayFor(modelItem => item.DateAdded)</h2>
+                    <h2 class="panel-title">@Html.DisplayFor(modelItem => item.Technician.FirstName) @Html.DisplayFor(modelItem => item.Technician.LastName)</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="padding:15px">
+                        <dl class="dl-horizontal">
+                            <dt>Trip Inches: </dt>
+                            <dd>@Html.DisplayFor(modelItem => item.TripInches)</dd>
+                            <dt>Max Inches: </dt>
+                            <dd>@Html.DisplayFor(modelItem => item.MaxInches)</dd>
+                            <dt>Trip Gallons: </dt>
+                            <dd>@Html.DisplayFor(modelItem => item.TripGallons)</dd>
+                            <dt>Max Gallons: </dt>
+                            <dd>@Html.DisplayFor(modelItem => item.MaxGallons)</dd>
+                            <dt>Note:</dt>
+                            <dd>@Html.DisplayFor(modelItem => item.Note)</dd>
+                        </dl>
+
+                    </div>
+                    @*<div style="padding-left:35px; padding-bottom:25px">@Html.ActionLink("View", "Details", "CalibrationRecord", new { id = item.ID }, new { @class = "btn btn-info btn-sm", @style = "color:white" })</div>*@
+                </div>
+            </div>
+        }
+        <div>
+            <button class="btn btn-toolbar btn-md" type="button" style="background-color:transparent; outline:hidden; border-color:transparent" data-toggle="collapse" data-target="#calibrationRecords" aria-expanded="true" aria-controls="calibrationRecords">
+                close <span class="glyphicon glyphicon-menu-up"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<br />
+@*<div>@Html.ActionLink("Back to List", "Index", new { id = Model.ID }, new { @class = "btn btn-default btn-sm" })</div>*@
+<input type="button" value="Back to List" onclick="history.go(-1); return false;" class="btn btn-default btn-sm" />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modalform")
+}
+

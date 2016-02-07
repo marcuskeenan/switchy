@@ -1,0 +1,36 @@
+﻿@model FlowswitchApplication.Models.CalibrationRecord
+
+@{
+    ViewBag.Title = "Details";
+    ViewBag.ID = Html.DisplayFor(model => model.Flowswitch.ID);
+}
+@Html.Partial("NavBarPartial")
+
+<h2>Details</h2>
+
+<div>
+    <h4>CalibrationRecord</h4>
+    <hr />
+    <div>
+        <ul style="list-style: none; ">
+          
+            <li><strong>Calibration Date:   </strong>@Html.DisplayFor(model => model.DateAdded)</li>
+            <li><strong>Technician:   </strong>@Html.DisplayFor(model => model.Technician.LastName)</li>            
+            <li><strong>Max Inches:   </strong>@Html.DisplayFor(model => model.MaxInches)</li>
+            <li><strong>Max Gallons:   </strong>@Html.DisplayFor(model => model.MaxGallons)</li>
+            <li><strong>Trip Inches:   </strong>@Html.DisplayFor(model => model.TripInches)</li>
+            <li><strong>Trip Gallons:   </strong>@Html.DisplayFor(model => model.TripGallons)</li>
+            <li><strong>FAMIS Work Order:  </strong>@Html.DisplayFor(model => model.ServiceRequest.FamisWorkOrder)</li>
+            <li><strong>Cater:   </strong>@Html.DisplayFor(model => model.ServiceRequest.FamisWorkOrder)</li>
+            <li><strong>Notes:   </strong>@Html.DisplayFor(model => model.Note)</li>
+        </ul>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @Html.ActionLink("Back to List", "Details", "Flowswitch", new { id = @ViewBag.ID }, new { @class = "btn btn-default btn-sm" })
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-default btn-sm" })
+        @Html.ActionLink("Delete", "Delete", new { id = Model.ID }, new { @class = "btn btn-danger btn-sm", @style = "color:white" })
+    </div>
+</div>

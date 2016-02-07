@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="switchyapp" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\marcus\\OneDrive\\VisualStudioProjects\\FlowswitchApplication\\FlowswitchApplication\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\marcus\\OneDrive\\VisualStudioProjects\\FlowswitchApplication\\FlowswitchApplication\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:bfj6kfkfzw.database.windows.net,1433;Initial Catalog=flowswitch_db;User ID=switchyadmin@bfj6kfkfzw;Password=#Slaclab94025" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\marcus\\OneDrive\\VisualStudioProjects\\FlowswitchApplication\\FlowswitchApplication\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="flowswitch_dbEntities-Web.config Connection String" description="" value="metadata=res://*/Models.FlowswitchModel.csdl|res://*/Models.FlowswitchModel.ssdl|res://*/Models.FlowswitchModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:bfj6kfkfzw.database.windows.net,1433;Initial Catalog=flowswitch_db;User ID=switchyadmin@bfj6kfkfzw;Password=#Slaclab94025&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\marcus\\OneDrive\\VisualStudioProjects\\FlowswitchApplication\\FlowswitchApplication\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='flowswitch_dbEntities']/@connectionString" />
+  </parameter>
+</parameters>

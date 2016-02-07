@@ -1,0 +1,56 @@
+﻿<div class="navbar navbar-default navbar-fixed-top hidden-lg hidden-md hidden-sm">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            @Html.ActionLink("Switchy {beta}", "Index", "Home", new { area = "" }, new { @class = "navbar-brand"})
+        </div>
+
+        <div class="navbar-collapse collapse" data-toggle="collapse" data-target=".navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Calibration Records", "Index", "CalibrationRecord")</li>
+                <li>@Html.ActionLink("Flow Switches", "Index", "Flowswitch")</li>
+                <li>@Html.ActionLink("Technicians", "Index", "Technician")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="navbar navbar-default navbar-fixed-top hidden-xs">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            @Html.ActionLink("Switchy {beta}", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Calibration Records", "Index", "CalibrationRecord")</li>
+                <li>@Html.ActionLink("Flow Switches", "Index", "Flowswitch")</li>
+                <li>@Html.ActionLink("Technicians", "Index", "Technician")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>

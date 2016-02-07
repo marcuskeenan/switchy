@@ -1,0 +1,46 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.dl-horizontal dt 
+{
+    white-space: nowrap;
+    width: 50px;
+    padding-left: 10px;
+    padding-right: 10px; 
+
+}
+
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none;
+}
+
+.bottom-border {
+    border-bottom: 1px solid #ddd;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 5px;
+}
+
+/*.modal {z-index: 1050;}*/

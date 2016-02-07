@@ -1,0 +1,49 @@
+﻿@model FlowswitchApplication.Models.CalibrationRecord
+
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Calibration Record Detail Modal</h4>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="modal-body">
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.Flowswitch.Name):</dt>
+            <dd>@Html.DisplayFor(model => model.Flowswitch.Name)</dd>
+            <dt>@Html.DisplayNameFor(model => model.MaxInches):</dt>
+            <dd>@Html.DisplayFor(model => model.MaxInches)</dd>
+            <dt>@Html.DisplayNameFor(model => model.MaxGallons):</dt>
+            <dd>@Html.DisplayFor(model => model.MaxGallons)</dd>
+            <dt>@Html.DisplayNameFor(model => model.TripInches):</dt>
+            <dd>@Html.DisplayFor(model => model.TripInches)</dd>
+            <dt>@Html.DisplayNameFor(model => model.TripGallons):</dt>
+            <dd>@Html.DisplayFor(model => model.TripGallons)</dd>
+            <dt>@Html.DisplayNameFor(model => model.DateAdded):</dt>
+            <dd>@Html.DisplayFor(model => model.DateAdded)</dd>                       
+            <dt>@*@Html.DisplayNameFor(model => model.ServiceRequest.FamisWorkOrder)*@FAMIS:</dt>
+            <dd>@Html.DisplayFor(model => model.ServiceRequest.FamisWorkOrder)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Technician.LastName):</dt>
+            <dd>@Html.DisplayFor(model => model.Technician.LastName)</dd>
+            <dt>@Html.DisplayNameFor(model => model.Note):</dt>
+            <dd>@Html.DisplayFor(model => model.Note)</dd> 
+
+        </dl>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-default btn-sm" })
+
+      
+        <!--
+        <a href='@Url.Action("Delete", "CalibrationRecord", new { id = Model.ID})'  data-toggle="modal" data-target="#myModal2" style="outline:hidden; color:white" class="btn btn-danger btn-sm">
+            Delete
+        </a>
+        -->
+        
+</div>
+
+}
+
+

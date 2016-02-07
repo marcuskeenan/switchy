@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="flowswitch_dbModelStoreContainer" CdmEntityContainer="flowswitch_dbEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Area">
+        <MappingFragment StoreEntitySet="Areas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Area1" ColumnName="Area" />
+          <ScalarProperty Name="AreaDescription" ColumnName="AreaDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalibrationRecords">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.CalibrationRecord">
+        <MappingFragment StoreEntitySet="CalibrationRecords">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaxInches" ColumnName="MaxInches" />
+          <ScalarProperty Name="MaxGallons" ColumnName="MaxGallons" />
+          <ScalarProperty Name="TripInches" ColumnName="TripInches" />
+          <ScalarProperty Name="TripGallons" ColumnName="TripGallons" />
+          <ScalarProperty Name="TechnicianID" ColumnName="TechnicianID" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="FlowswitchID" ColumnName="FlowswitchID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ServiceRequestID" ColumnName="ServiceRequestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calibrations">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Calibration">
+        <MappingFragment StoreEntitySet="Calibrations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaxInches" ColumnName="MaxInches" />
+          <ScalarProperty Name="MaxGallons" ColumnName="MaxGallons" />
+          <ScalarProperty Name="TripInches" ColumnName="TripInches" />
+          <ScalarProperty Name="TripGallons" ColumnName="TripGallons" />
+          <ScalarProperty Name="TechnicainID" ColumnName="TechnicainID" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Details2">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Details2">
+        <MappingFragment StoreEntitySet="Details2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDold" ColumnName="IDold" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="FlowswitchID" ColumnName="FlowswitchID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detailsoriginals">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.detailsoriginal">
+        <MappingFragment StoreEntitySet="detailsoriginal">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Famis">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Fami">
+        <MappingFragment StoreEntitySet="Famis">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EquipmentID" ColumnName="EquipmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowElementMakes">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowElementMake">
+        <MappingFragment StoreEntitySet="FlowElementMake">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowElementModels">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowElementModel">
+        <MappingFragment StoreEntitySet="FlowElementModel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FlowElementMakeID" ColumnName="FlowElementMakeID" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowElements">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowElement">
+        <MappingFragment StoreEntitySet="FlowElements">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FlowElementTypeID" ColumnName="FlowElementTypeID" />
+          <ScalarProperty Name="MakeID" ColumnName="MakeID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowElementSizes">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowElementSize">
+        <MappingFragment StoreEntitySet="FlowElementSizes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FlowElementModelID" ColumnName="FlowElementModelID" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowElementTypes">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowElementType">
+        <MappingFragment StoreEntitySet="FlowElementTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flowswitches">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Flowswitch">
+        <MappingFragment StoreEntitySet="Flowswitches">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="VenturiID" ColumnName="VenturiID" />
+          <ScalarProperty Name="WaterID" ColumnName="WaterID" />
+          <ScalarProperty Name="SubsystemID" ColumnName="SubsystemID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="DetailID" ColumnName="DetailID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="FlowswitchMakeID" ColumnName="FlowswitchMakeID" />
+          <ScalarProperty Name="FlowswitchModelID" ColumnName="FlowswitchModelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowswitchMakes">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowswitchMake">
+        <MappingFragment StoreEntitySet="FlowswitchMake">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowswitchModels">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowswitchModel">
+        <MappingFragment StoreEntitySet="FlowswitchModel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FlowSwitchMakeID" ColumnName="FlowSwitchMakeID" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowswitchNotes">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowswitchNote">
+        <MappingFragment StoreEntitySet="FlowswitchNotes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDold" ColumnName="IDold" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="FlowswitchID" ColumnName="FlowswitchID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowswitchTypes">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowswitchType">
+        <MappingFragment StoreEntitySet="FlowswitchTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlowswitchVoltages">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.FlowswitchVoltage">
+        <MappingFragment StoreEntitySet="FlowswitchVoltage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Location">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Location1" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maps">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Map">
+        <MappingFragment StoreEntitySet="Maps">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FlowswitchID" ColumnName="FlowswitchID" />
+          <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+          <ScalarProperty Name="ServiceRequestID" ColumnName="ServiceRequestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notes">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Note">
+        <MappingFragment StoreEntitySet="Notes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Note1" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pictures">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Picture">
+        <MappingFragment StoreEntitySet="Pictures">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FlowswitchID" ColumnName="FlowswitchID" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rotameters">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Rotameter">
+        <MappingFragment StoreEntitySet="Rotameters">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceRequests">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.ServiceRequest">
+        <MappingFragment StoreEntitySet="ServiceRequests">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FamisWorkOrder" ColumnName="FamisWorkOrder" />
+          <ScalarProperty Name="Cater" ColumnName="Cater" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubSystems">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.SubSystem">
+        <MappingFragment StoreEntitySet="SubSystems">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Technicians">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Technician">
+        <MappingFragment StoreEntitySet="Technicians">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venturis">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.Venturi">
+        <MappingFragment StoreEntitySet="Venturis">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WaterSources">
+      <EntityTypeMapping TypeName="flowswitch_dbModel.WaterSource">
+        <MappingFragment StoreEntitySet="WaterSources">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="flowswitch_dbModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

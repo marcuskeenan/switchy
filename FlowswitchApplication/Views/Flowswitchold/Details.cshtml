@@ -1,0 +1,106 @@
+﻿@model FlowswitchApplication.Models.Flowswitch
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Flowswitch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DetailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetailID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area.Area1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area.Area1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlowswitchMake.Make)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlowswitchMake.Make)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlowswitchModel.Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlowswitchModel.Model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.Location1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Location1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubSystem.Acronym)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubSystem.Acronym)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlowswitchType.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlowswitchType.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Venturi.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Venturi.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WaterSource.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WaterSource.Source)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

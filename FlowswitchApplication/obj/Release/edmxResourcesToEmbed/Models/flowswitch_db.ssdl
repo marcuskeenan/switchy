@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="flowswitch_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Areas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Area" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="AreaDescription" Type="varchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="CalibrationRecords">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaxInches" Type="varchar" MaxLength="11" />
+    <Property Name="MaxGallons" Type="varchar" MaxLength="11" />
+    <Property Name="TripInches" Type="varchar" MaxLength="11" />
+    <Property Name="TripGallons" Type="varchar" MaxLength="11" />
+    <Property Name="TechnicianID" Type="int" />
+    <Property Name="DateAdded" Type="datetime2" Precision="0" />
+    <Property Name="FlowswitchID" Type="int" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="255" />
+    <Property Name="ServiceRequestID" Type="int" />
+  </EntityType>
+  <EntityType Name="Calibrations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaxInches" Type="varchar" MaxLength="11" />
+    <Property Name="MaxGallons" Type="varchar" MaxLength="11" />
+    <Property Name="TripInches" Type="varchar" MaxLength="11" />
+    <Property Name="TripGallons" Type="varchar" MaxLength="11" />
+    <Property Name="TechnicainID" Type="int" />
+    <Property Name="DateAdded" Type="datetime2" Precision="0" />
+  </EntityType>
+  <EntityType Name="Details2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDold" Type="int" Nullable="false" />
+    <Property Name="Detail" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="FlowswitchID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="detailsoriginal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detail" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Famis">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EquipmentID" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FlowElementMake">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Make" Type="varchar" MaxLength="48" />
+  </EntityType>
+  <EntityType Name="FlowElementModel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlowElementMakeID" Type="int" Nullable="false" />
+    <Property Name="Model" Type="varchar" MaxLength="48" />
+  </EntityType>
+  <EntityType Name="FlowElements">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlowElementTypeID" Type="int" />
+    <Property Name="MakeID" Type="int" />
+    <Property Name="ModelID" Type="int" />
+    <Property Name="SizeID" Type="int" />
+  </EntityType>
+  <EntityType Name="FlowElementSizes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlowElementModelID" Type="int" Nullable="false" />
+    <Property Name="Size" Type="varchar" MaxLength="48" />
+  </EntityType>
+  <EntityType Name="FlowElementTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar(max)" />
+    <Property Name="Description" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Flowswitches">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AreaID" Type="int" Nullable="false" />
+    <Property Name="LocationID" Type="int" Nullable="false" />
+    <Property Name="VenturiID" Type="int" Nullable="false" />
+    <Property Name="WaterID" Type="int" Nullable="false" />
+    <Property Name="SubsystemID" Type="int" Nullable="false" />
+    <Property Name="TypeID" Type="int" Nullable="false" />
+    <Property Name="DetailID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="Alias" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="FlowswitchMakeID" Type="int" />
+    <Property Name="FlowswitchModelID" Type="int" />
+  </EntityType>
+  <EntityType Name="FlowswitchMake">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Make" Type="varchar" MaxLength="48" />
+  </EntityType>
+  <EntityType Name="FlowswitchModel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlowSwitchMakeID" Type="int" Nullable="false" />
+    <Property Name="Model" Type="varchar" MaxLength="48" />
+    <Property Name="Description" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="FlowswitchNotes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDold" Type="int" />
+    <Property Name="Note" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="FlowswitchID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FlowswitchTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="48" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FlowswitchVoltage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Voltage" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Maps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FlowswitchID" Type="int" Nullable="false" />
+    <Property Name="NoteID" Type="int" Nullable="false" />
+    <Property Name="ServiceRequestID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pictures">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FlowswitchID" Type="int" Nullable="false" />
+    <Property Name="Picture" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rotameters">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" />
+    <Property Name="Type" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ServiceRequests">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FamisWorkOrder" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Cater" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubSystems">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Acronym" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="48" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Technicians">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="48" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="48" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Venturis">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="48" Nullable="false" />
+    <Property Name="Size" Type="varchar" MaxLength="16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WaterSources">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Source" Type="varchar" MaxLength="48" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CalibrationRecords_Flowswitches">
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="1" />
+    <End Role="CalibrationRecords" Type="Self.CalibrationRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flowswitches">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CalibrationRecords">
+        <PropertyRef Name="FlowswitchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CalibrationRecords_ServiceRequests">
+    <End Role="ServiceRequests" Type="Self.ServiceRequests" Multiplicity="0..1" />
+    <End Role="CalibrationRecords" Type="Self.CalibrationRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServiceRequests">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CalibrationRecords">
+        <PropertyRef Name="ServiceRequestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CalibrationRecords_Technicians">
+    <End Role="Technicians" Type="Self.Technicians" Multiplicity="0..1" />
+    <End Role="CalibrationRecords" Type="Self.CalibrationRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Technicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CalibrationRecords">
+        <PropertyRef Name="TechnicianID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FlowElementModel_FlowElementMake">
+    <End Role="FlowElementMake" Type="Self.FlowElementMake" Multiplicity="1" />
+    <End Role="FlowElementModel" Type="Self.FlowElementModel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlowElementMake">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FlowElementModel">
+        <PropertyRef Name="FlowElementMakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FlowElements_FlowElementMake">
+    <End Role="FlowElementMake" Type="Self.FlowElementMake" Multiplicity="0..1" />
+    <End Role="FlowElements" Type="Self.FlowElements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlowElementMake">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FlowElements">
+        <PropertyRef Name="MakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FlowElements_FlowElementTypes">
+    <End Role="FlowElementTypes" Type="Self.FlowElementTypes" Multiplicity="0..1" />
+    <End Role="FlowElements" Type="Self.FlowElements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlowElementTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FlowElements">
+        <PropertyRef Name="FlowElementTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FlowElementSizes_FlowElementModel">
+    <End Role="FlowElementModel" Type="Self.FlowElementModel" Multiplicity="1" />
+    <End Role="FlowElementSizes" Type="Self.FlowElementSizes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlowElementModel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FlowElementSizes">
+        <PropertyRef Name="FlowElementModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flowswitches_Areas">
+    <End Role="Areas" Type="Self.Areas" Multiplicity="1" />
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Areas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Flowswitches">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flowswitches_FlowswitchMake">
+    <End Role="FlowswitchMake" Type="Self.FlowswitchMake" Multiplicity="0..1" />
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlowswitchMake">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Flowswitches">
+        <PropertyRef Name="FlowswitchMakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flowswitches_FlowswitchModel">
+    <End Role="FlowswitchModel" Type="Self.FlowswitchModel" Multiplicity="0..1" />
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlowswitchModel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Flowswitches">
+        <PropertyRef Name="FlowswitchModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flowswitches_Locations">
+    <End Role="Locations" Type="Self.Locations" Multiplicity="1" />
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Flowswitches">
+        <PropertyRef Name="LocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flowswitches_SubSystems">
+    <End Role="SubSystems" Type="Self.SubSystems" Multiplicity="1" />
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubSystems">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Flowswitches">
+        <PropertyRef Name="SubsystemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flowswitches_Type">
+    <End Role="FlowswitchTypes" Type="Self.FlowswitchTypes" Multiplicity="1" />
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlowswitchTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Flowswitches">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flowswitches_Venturis">
+    <End Role="Venturis" Type="Self.Venturis" Multiplicity="1" />
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venturis">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Flowswitches">
+        <PropertyRef Name="VenturiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flowswitches_WaterSources">
+    <End Role="WaterSources" Type="Self.WaterSources" Multiplicity="1" />
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WaterSources">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Flowswitches">
+        <PropertyRef Name="WaterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FlowswitchModel_FlowswitchMake">
+    <End Role="FlowswitchMake" Type="Self.FlowswitchMake" Multiplicity="1" />
+    <End Role="FlowswitchModel" Type="Self.FlowswitchModel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FlowswitchMake">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FlowswitchModel">
+        <PropertyRef Name="FlowSwitchMakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FlowswitchNotes_Flowswitches">
+    <End Role="Flowswitches" Type="Self.Flowswitches" Multiplicity="1" />
+    <End Role="FlowswitchNotes" Type="Self.FlowswitchNotes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flowswitches">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FlowswitchNotes">
+        <PropertyRef Name="FlowswitchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="flowswitch_dbModelStoreContainer">
+    <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CalibrationRecords" EntityType="Self.CalibrationRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Calibrations" EntityType="Self.Calibrations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Details2" EntityType="Self.Details2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detailsoriginal" EntityType="Self.detailsoriginal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Famis" EntityType="Self.Famis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowElementMake" EntityType="Self.FlowElementMake" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowElementModel" EntityType="Self.FlowElementModel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowElements" EntityType="Self.FlowElements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowElementSizes" EntityType="Self.FlowElementSizes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowElementTypes" EntityType="Self.FlowElementTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flowswitches" EntityType="Self.Flowswitches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowswitchMake" EntityType="Self.FlowswitchMake" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowswitchModel" EntityType="Self.FlowswitchModel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowswitchNotes" EntityType="Self.FlowswitchNotes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowswitchTypes" EntityType="Self.FlowswitchTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FlowswitchVoltage" EntityType="Self.FlowswitchVoltage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maps" EntityType="Self.Maps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notes" EntityType="Self.Notes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pictures" EntityType="Self.Pictures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rotameters" EntityType="Self.Rotameters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceRequests" EntityType="Self.ServiceRequests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubSystems" EntityType="Self.SubSystems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Technicians" EntityType="Self.Technicians" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Venturis" EntityType="Self.Venturis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WaterSources" EntityType="Self.WaterSources" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CalibrationRecords_Flowswitches" Association="Self.FK_CalibrationRecords_Flowswitches">
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+      <End Role="CalibrationRecords" EntitySet="CalibrationRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CalibrationRecords_ServiceRequests" Association="Self.FK_CalibrationRecords_ServiceRequests">
+      <End Role="ServiceRequests" EntitySet="ServiceRequests" />
+      <End Role="CalibrationRecords" EntitySet="CalibrationRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CalibrationRecords_Technicians" Association="Self.FK_CalibrationRecords_Technicians">
+      <End Role="Technicians" EntitySet="Technicians" />
+      <End Role="CalibrationRecords" EntitySet="CalibrationRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FlowElementModel_FlowElementMake" Association="Self.FK_FlowElementModel_FlowElementMake">
+      <End Role="FlowElementMake" EntitySet="FlowElementMake" />
+      <End Role="FlowElementModel" EntitySet="FlowElementModel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FlowElements_FlowElementMake" Association="Self.FK_FlowElements_FlowElementMake">
+      <End Role="FlowElementMake" EntitySet="FlowElementMake" />
+      <End Role="FlowElements" EntitySet="FlowElements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FlowElements_FlowElementTypes" Association="Self.FK_FlowElements_FlowElementTypes">
+      <End Role="FlowElementTypes" EntitySet="FlowElementTypes" />
+      <End Role="FlowElements" EntitySet="FlowElements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FlowElementSizes_FlowElementModel" Association="Self.FK_FlowElementSizes_FlowElementModel">
+      <End Role="FlowElementModel" EntitySet="FlowElementModel" />
+      <End Role="FlowElementSizes" EntitySet="FlowElementSizes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flowswitches_Areas" Association="Self.FK_Flowswitches_Areas">
+      <End Role="Areas" EntitySet="Areas" />
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flowswitches_FlowswitchMake" Association="Self.FK_Flowswitches_FlowswitchMake">
+      <End Role="FlowswitchMake" EntitySet="FlowswitchMake" />
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flowswitches_FlowswitchModel" Association="Self.FK_Flowswitches_FlowswitchModel">
+      <End Role="FlowswitchModel" EntitySet="FlowswitchModel" />
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flowswitches_Locations" Association="Self.FK_Flowswitches_Locations">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flowswitches_SubSystems" Association="Self.FK_Flowswitches_SubSystems">
+      <End Role="SubSystems" EntitySet="SubSystems" />
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flowswitches_Type" Association="Self.FK_Flowswitches_Type">
+      <End Role="FlowswitchTypes" EntitySet="FlowswitchTypes" />
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flowswitches_Venturis" Association="Self.FK_Flowswitches_Venturis">
+      <End Role="Venturis" EntitySet="Venturis" />
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flowswitches_WaterSources" Association="Self.FK_Flowswitches_WaterSources">
+      <End Role="WaterSources" EntitySet="WaterSources" />
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FlowswitchModel_FlowswitchMake" Association="Self.FK_FlowswitchModel_FlowswitchMake">
+      <End Role="FlowswitchMake" EntitySet="FlowswitchMake" />
+      <End Role="FlowswitchModel" EntitySet="FlowswitchModel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FlowswitchNotes_Flowswitches" Association="Self.FK_FlowswitchNotes_Flowswitches">
+      <End Role="Flowswitches" EntitySet="Flowswitches" />
+      <End Role="FlowswitchNotes" EntitySet="FlowswitchNotes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

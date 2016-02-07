@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1eca8c663a234859b01af72fc5a7c105" Name="Diagram1">
+        <EntityTypeShape EntityType="flowswitch_dbModel.C__MigrationHistory" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Area" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.AspNetRole" Width="1.5" PointX="7.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.AspNetUserClaim" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.AspNetUserLogin" Width="1.5" PointX="12.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.AspNetUser" Width="1.5" PointX="10" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.CalibrationRecord" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Calibration" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Details2" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.detailsoriginal" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Fami" Width="1.5" PointX="11.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowElementMake" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowElementModel" Width="1.5" PointX="12" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowElement" Width="1.5" PointX="12" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowElementSize" Width="1.5" PointX="14.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowElementType" Width="1.5" PointX="9.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Flowswitch" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowswitchMake" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowswitchModel" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowswitchNote" Width="1.5" PointX="7.5" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowswitchType" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.FlowswitchVoltage" Width="1.5" PointX="13.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Location" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Map" Width="1.5" PointX="15.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Note" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Picture" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Rotameter" Width="1.5" PointX="5.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.ServiceRequest" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.SubSystem" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Technician" Width="1.5" PointX="5.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.Venturi" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flowswitch_dbModel.WaterSource" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_Flowswitches_Areas" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_CalibrationRecords_Flowswitches" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_CalibrationRecords_ServiceRequests" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_CalibrationRecords_Technicians" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_FlowElementModel_FlowElementMake" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_FlowElements_FlowElementMake" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_FlowElementSizes_FlowElementModel" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_FlowElements_FlowElementTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_Flowswitches_FlowswitchMake" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_Flowswitches_FlowswitchModel" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_Flowswitches_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_Flowswitches_SubSystems" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_Flowswitches_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_Flowswitches_Venturis" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_Flowswitches_WaterSources" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_FlowswitchNotes_Flowswitches" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.FK_FlowswitchModel_FlowswitchMake" ManuallyRouted="false" />
+        <AssociationConnector Association="flowswitch_dbModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

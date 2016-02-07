@@ -1,0 +1,103 @@
+﻿@model PagedList.IPagedList<FlowswitchApplication.Models.Flowswitch>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Flowswitches";
+}
+
+<h2>Flowswitches</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "Flowswitch", FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+  
+            @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            Alias
+        </th>
+        <th>
+           
+            @Html.ActionLink("Area", "Index", new { sortOrder = ViewBag.AreaIDSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+           Make
+        </th>
+        <th>
+            Model
+        </th>
+        <th>
+           Location
+        </th>
+        <th>
+            Subsystem
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+           Venturi
+        </th>
+        <th>
+            Source
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area.Area1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlowswitchMake.Make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlowswitchModel.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location.Location1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubSystem.Acronym)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlowswitchType.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Venturi.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WaterSource.Source)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

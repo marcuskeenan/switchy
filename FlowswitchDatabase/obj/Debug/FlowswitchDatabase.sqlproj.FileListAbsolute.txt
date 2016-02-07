@@ -1,0 +1,7 @@
+C:\Users\marcus\OneDrive\VisualStudioProjects\FlowswitchApplication\FlowswitchDatabase\bin\Debug\FlowswitchDatabase.dacpac
+C:\Users\marcus\OneDrive\VisualStudioProjects\FlowswitchApplication\FlowswitchDatabase\obj\Debug\FlowswitchDatabase.dll
+C:\Users\marcus\OneDrive\VisualStudioProjects\FlowswitchApplication\FlowswitchDatabase\obj\Debug\FlowswitchDatabase.pdb
+C:\Users\marcus\OneDrive\VisualStudioProjects\FlowswitchApplication\FlowswitchDatabase\obj\Debug\Model.xml
+C:\Users\marcus\OneDrive\VisualStudioProjects\FlowswitchApplication\FlowswitchDatabase\obj\Debug\refactor.xml
+C:\Users\marcus\OneDrive\VisualStudioProjects\FlowswitchApplication\FlowswitchDatabase\obj\Debug\postdeploy.sql
+C:\Users\marcus\OneDrive\VisualStudioProjects\FlowswitchApplication\FlowswitchDatabase\obj\Debug\predeploy.sql
