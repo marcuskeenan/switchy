@@ -40,6 +40,7 @@ namespace FlowswitchApplication.Controllers
         public ActionResult Create()
         {
             ViewBag.FlowswitchID = new SelectList(db.Flowswitches, "ID", "Name");
+            ViewBag.TechnicianID = new SelectList(db.Technicians, "ID", "LastName");
             return View();
         }
 

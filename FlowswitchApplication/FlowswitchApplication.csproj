@@ -26,6 +26,7 @@
     <SccProvider>SAK</SccProvider>
     <NuGetPackageImportStamp>d90ef307</NuGetPackageImportStamp>
     <ApplicationInsightsResourceId>/subscriptions/52f41fa3-b571-49fe-9830-606745017bbc/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/FlowswitchApplication</ApplicationInsightsResourceId>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -237,6 +238,7 @@
     <Compile Include="Bootstrap Html Helpers\DatePickerFor.cs" />
     <Compile Include="Bootstrap Html Helpers\HelperMethods.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\CalibrationRecordController.cs" />
     <Compile Include="Controllers\FlowswitchController.cs" />
     <Compile Include="Controllers\FlowswitchNotesController.cs" />
@@ -462,7 +464,9 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\bootstrapold.js" />
+    <None Include="Properties\PublishProfiles\switchyapp - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\switchyapp - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\switchyapp - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\switchyapp - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\switchyapp.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
@@ -640,6 +644,12 @@
     <Content Include="Views\FlowswitchNotes\Details.cshtml" />
     <Content Include="Views\FlowswitchNotes\Edit.cshtml" />
     <Content Include="Views\FlowswitchNotes\Index.cshtml" />
+    <Content Include="Views\Area\Create.cshtml" />
+    <Content Include="Views\Area\Delete.cshtml" />
+    <Content Include="Views\Area\Details.cshtml" />
+    <Content Include="Views\Area\Edit.cshtml" />
+    <Content Include="Views\Area\Index.cshtml" />
+    <Content Include="Views\Shared\FlowswitchNoteCount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

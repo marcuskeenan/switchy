@@ -67,7 +67,7 @@ namespace FlowswitchApplication.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
-        [RegularExpression(@"^[a-zA-Z0-9._%+-]+(@slac.stanford.edu)$", ErrorMessage = "Registration limited to @slac.stanford.edu")]
+        [RegularExpression(@"^[a-zA-Z0-9._%+-]+(@slac.stanford.edu)$", ErrorMessage = "Please use email address with allowed domain!")]
         public string Email { get; set; }
 
         [Required]

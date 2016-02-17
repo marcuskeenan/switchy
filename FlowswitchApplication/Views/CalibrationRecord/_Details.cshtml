@@ -9,24 +9,25 @@
 {
     @Html.AntiForgeryToken()
     <div class="modal-body">
+        
         <dl class="dl-horizontal">
-            <dt>@Html.DisplayNameFor(model => model.Flowswitch.Name):</dt>
+            <dt>Flow Switch:     </dt>
             <dd>@Html.DisplayFor(model => model.Flowswitch.Name)</dd>
-            <dt>@Html.DisplayNameFor(model => model.MaxInches):</dt>
+            <dt>Calibration Date:     </dt>
+            <dd>@Html.DisplayFor(model => model.DateAdded)</dd>  
+            <dt>Max Inches:     </dt>
             <dd>@Html.DisplayFor(model => model.MaxInches)</dd>
-            <dt>@Html.DisplayNameFor(model => model.MaxGallons):</dt>
-            <dd>@Html.DisplayFor(model => model.MaxGallons)</dd>
-            <dt>@Html.DisplayNameFor(model => model.TripInches):</dt>
+            <dt>Trip Inches:     </dt>
             <dd>@Html.DisplayFor(model => model.TripInches)</dd>
-            <dt>@Html.DisplayNameFor(model => model.TripGallons):</dt>
-            <dd>@Html.DisplayFor(model => model.TripGallons)</dd>
-            <dt>@Html.DisplayNameFor(model => model.DateAdded):</dt>
-            <dd>@Html.DisplayFor(model => model.DateAdded)</dd>                       
-            <dt>@*@Html.DisplayNameFor(model => model.ServiceRequest.FamisWorkOrder)*@FAMIS:</dt>
+            <dt>Max Gallons:     </dt>
+            <dd>@Html.DisplayFor(model => model.MaxGallons)</dd>
+            <dt>Trip Gallons:     </dt>
+            <dd>@Html.DisplayFor(model => model.TripGallons)</dd>                           
+            <dt>FAMIS:     </dt>
             <dd>@Html.DisplayFor(model => model.ServiceRequest.FamisWorkOrder)</dd>
-            <dt>@Html.DisplayNameFor(model => model.Technician.LastName):</dt>
+            <dt>Technician:     </dt>
             <dd>@Html.DisplayFor(model => model.Technician.LastName)</dd>
-            <dt>@Html.DisplayNameFor(model => model.Note):</dt>
+            <dt>Note:     </dt>
             <dd>@Html.DisplayFor(model => model.Note)</dd> 
 
         </dl>

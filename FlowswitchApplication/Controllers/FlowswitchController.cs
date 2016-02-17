@@ -237,6 +237,15 @@ namespace FlowswitchApplication.Controllers
             return PartialView(count);
         }
 
+        // GET: FlowswitchNote/Count
+        public ActionResult FlowswitchNoteCount(int? id)
+        {
+
+            var count = db.FlowswitchNotes.Count(p => p.FlowswitchID == id);
+            db.Dispose();
+            return PartialView(count);
+        }
+
         
 
         protected override void Dispose(bool disposing)
